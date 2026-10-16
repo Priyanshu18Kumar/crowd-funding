@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrowdFund - Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+</head>
+<body data-page="admin">
+
+  <header class="topbar">
+    <h1>CrowdFund - Admin</h1>
+    <div class="topbar-right">
+      <span id="adminName"></span>
+      <button id="logoutBtn" class="small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="nav-btn active" data-panel="panelUsers">Users</button>
+    <button class="nav-btn" data-panel="panelCampaigns">Campaigns</button>
+    <button class="nav-btn" data-panel="panelSettings">Settings</button>
+    <button class="nav-btn" data-panel="panelActivity">Activity</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- Users -->
+    <section id="panelUsers" class="panel">
+      <div class="card">
+        <h2>User Management</h2>
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Action</th></tr>
+          </thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+
+        <h3>Add a user</h3>
+        <form id="addUserForm" class="inline-form">
+          <input type="text" id="newUserName" placeholder="Name" required>
+          <input type="email" id="newUserEmail" placeholder="Email" required>
+          <input type="text" id="newUserPassword" placeholder="Password" required>
+          <select id="newUserRole">
+            <option value="Admin">Admin</option>
+            <option value="Creator">Creator</option>
+            <option value="Contributor">Contributor</option>
+          </select>
+          <button type="submit" class="small">Add</button>
+        </form>
+        <p id="addUserMessage" class="message"></p>
+      </div>
+    </section>
+
+    <!-- Campaigns -->
+    <section id="panelCampaigns" class="panel" style="display:none">
+      <div class="card">
+        <h2>Campaign Management</h2>
+        <p class="muted">Approve or reject campaigns that creators have submitted.</p>
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Title</th><th>Goal</th><th>Raised</th><th>Status</th><th>Action</th></tr>
+          </thead>
+          <tbody id="campaignsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="panelSettings" class="panel" style="display:none">
+      <div class="card">
+        <h2>System Settings</h2>
+        <div id="settingsBox"></div>
+        <button id="saveSettingsBtn" class="small">Save Settings</button>
+        <p id="settingsMessage" class="message"></p>
+      </div>
+    </section>
+
+    <!-- Activity -->
+    <section id="panelActivity" class="panel" style="display:none">
+      <div class="card">
+        <h2>Activity Monitoring</h2>
+        <div id="activityBox"></div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

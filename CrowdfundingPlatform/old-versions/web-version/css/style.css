@@ -1,0 +1,295 @@
+/* ============================================================
+   style.css  -  simple styling for the Crowdfunding frontend
+   Kept short and easy to read so a beginner can change it.
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  background: #2f6fed;
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- layout ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.two-col {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.two-col > .card {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ---------- cards ---------- */
+.card {
+  background: #fff;
+  border: 1px solid #e0e4ea;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2f6fed;
+}
+
+.card h3 {
+  font-size: 15px;
+}
+
+.card h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+/* ---------- forms ---------- */
+label {
+  display: block;
+  font-size: 13px;
+  margin: 10px 0 4px;
+  color: #555;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #ccd2da;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 14px;
+  padding: 10px 16px;
+  background: #2f6fed;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f56c4;
+}
+
+button.small {
+  margin-top: 0;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+button.danger {
+  background: #d64545;
+}
+
+button.danger:hover {
+  background: #b53535;
+}
+
+.inline-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.inline-form input,
+.inline-form select {
+  width: auto;
+  flex: 1;
+  min-width: 130px;
+}
+
+/* ---------- messages ---------- */
+.message {
+  font-size: 13px;
+  min-height: 18px;
+  margin: 8px 0 0;
+}
+
+.message.ok {
+  color: #1a8f3c;
+}
+
+.message.error {
+  color: #d64545;
+}
+
+.hint {
+  font-size: 12px;
+  color: #888;
+}
+
+.muted {
+  color: #888;
+  font-size: 13px;
+}
+
+/* ---------- tabs (admin) ---------- */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: #e9edf3;
+  padding: 6px 16px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  margin: 0;
+  background: transparent;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  background: #d7dee8;
+}
+
+.nav-btn.active {
+  background: #2f6fed;
+  color: #fff;
+}
+
+/* ---------- tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 9px 10px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+th {
+  background: #f0f3f8;
+  font-size: 13px;
+}
+
+/* ---------- badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.badge.pending {
+  background: #fff2cc;
+  color: #8a6d00;
+}
+
+.badge.approved {
+  background: #d6f2dd;
+  color: #1a8f3c;
+}
+
+.badge.rejected {
+  background: #f8d6d6;
+  color: #b53535;
+}
+
+/* ---------- progress bar ---------- */
+.progress {
+  background: #e6eaf0;
+  border-radius: 6px;
+  height: 12px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progress .bar {
+  height: 100%;
+  background: #2f6fed;
+}
+
+/* ---------- settings rows ---------- */
+.setting-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.setting-row label {
+  margin: 0;
+  width: 180px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ---------- contributor cards ---------- */
+.contribute-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contribute-row input {
+  width: 140px;
+}
+
+.contribute-row button {
+  margin-top: 0;
+}
+
+#activityBox ol {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+#activityBox li {
+  margin-bottom: 4px;
+}

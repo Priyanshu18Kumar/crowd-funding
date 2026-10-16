@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrowdFund - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+</head>
+<body data-page="index">
+
+  <header class="topbar">
+    <div>
+      <h1>CrowdFund</h1>
+      <p class="tagline">Create campaigns, support causes, track progress</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="two-col">
+
+      <!-- Login -->
+      <section class="card">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required>
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required>
+
+          <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage" class="message"></p>
+        <p class="hint">Default admin: admin@crowd.com / admin123</p>
+      </section>
+
+      <!-- Register -->
+      <section class="card">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <label for="regName">Name</label>
+          <input type="text" id="regName" required>
+
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" required>
+
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" required>
+
+          <label for="regRole">I am a</label>
+          <select id="regRole">
+            <option value="Creator">Campaign Creator</option>
+            <option value="Contributor">Contributor</option>
+          </select>
+
+          <button type="submit">Register</button>
+        </form>
+        <p id="registerMessage" class="message"></p>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>
